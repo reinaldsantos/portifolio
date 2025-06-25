@@ -167,3 +167,8 @@ h2 {
   50% { border-color: transparent; }
   100% { border-color: #3b4b5a; }
 }
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 19ch; }  /* Corrigido */
+}
