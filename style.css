@@ -144,31 +144,39 @@ h2 {
   margin: 20px auto;
 }
 
-.typing {
-  font-weight: bold;
-  font-size: 2.5em;
-  color: #3b4b5a;
-  border-right: 3px solid #3b4b5a;
+typing {
+  font-size: 1.5rem;
+  color: #0ff;
+  margin-top: 1rem;
+  border-right: 2px solid #0ff;
   white-space: nowrap;
   overflow: hidden;
   width: 0;
-  margin: 0 auto;
-  text-align: center;
-  display: block;
-  animation: typing 3s steps(13) forwards, blink 0.7s step-end infinite;
+  animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
 }
 
 @keyframes typing {
-  from { width: 0; }
-  to { width: 13ch; }
+  to {
+    width: 28ch;
+  }
 }
-
 @keyframes blink {
-  50% { border-color: transparent; }
-  100% { border-color: #3b4b5a; }
+  50% {
+    border-color: transparent;
+  }
 }
 
-@keyframes typing {
-  from { width: 0; }
-  to { width: 19ch; }  /* Corrigido */
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, rgb(17, 236, 218), rgb(0, 0, 0), rgb(255, 0, 0), green, blue, indigo, violet);
+  background-size: 400% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: brilho 4s linear infinite;
+}
+
+@keyframes brilho {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
 }
